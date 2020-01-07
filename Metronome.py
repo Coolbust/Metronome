@@ -1,5 +1,7 @@
 import time
 import winsound
+
+
 def main(bpm = 120, bpb = 4):
         sleep = 60.0 / bpm
         counter = 0
@@ -10,6 +12,8 @@ def main(bpm = 120, bpb = 4):
                 winsound.PlaySound("*",winsound.SND_ASYNC)
             else:
                 print('TICK')
+                winsound.PlaySound("SystemExit", winsound.SND_ASYNC)
+
             time.sleep(sleep)
 
 main()
